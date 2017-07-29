@@ -6,6 +6,7 @@ import App from '../App'
 const home = r => require.ensure([], () => r(require('../page/home/home')), 'home');
 const addressList = r => require.ensure([], () => r(require('../page/address/addressList')), 'addressList');
 const addAddress = r => require.ensure([], () => r(require('../page/address/addNewAddress')), 'addAddress');
+const tabBar = r => require.ensure([], () => r(require('../page/tabbar/tabbar')), 'tabBar');
 export default [{
   path: '/',
   component: App, //顶层路由，对应index.html
@@ -26,6 +27,10 @@ export default [{
     {
       path:'/addAddress',
       component:addAddress
+    },
+    {
+      path:'/tabBar',
+      component:tabBar
     }
   ]
 }]

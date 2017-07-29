@@ -4,7 +4,7 @@
     <ul class="ad_list">
       <li>
         <section class="ad_item">
-          <div class="ad_l" @click="">
+          <div class="ad_l" @click="goWash">
             <p>万达A区写字楼梁溪路35号19楼恒创资产</p>
             <p>王晖 13616197695</p>
           </div>
@@ -15,7 +15,7 @@
       </li>
       <li>
         <section class="ad_item">
-          <div class="ad_l">
+          <div class="ad_l" @click="goWash">
             <p>复地公园城27号401室</p>
             <p>王晖 13616197695</p>
           </div>
@@ -26,7 +26,7 @@
       </li>
       <li>
         <section class="ad_item">
-          <div class="ad_l">
+          <div class="ad_l" @click="goWash">
             <p>万达A区写字楼梁溪路35号</p>
             <p>王晖 13616197695</p>
           </div>
@@ -73,6 +73,11 @@
     methods:{
       addDetail(){
           this.$router.push({path:'/addAddress'});
+      }
+      ,
+      goWash(){
+        alert('111')
+        this.$router.push({path:'/tabBar'});
       }
     }
   }
